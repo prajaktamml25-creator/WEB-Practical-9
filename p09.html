@@ -1,0 +1,252 @@
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+
+<!-- Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #f4f4f4;
+}
+
+/* Header */
+header {
+    background: url('https://picsum.photos/1200/400') no-repeat center/cover;
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+    animation: fadeIn 2s ease-in;
+}
+
+header h1 {
+    background: rgba(0,0,0,0.5);
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 8px;
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: center;
+    background: #333;
+}
+
+nav a {
+    color: white;
+    padding: 15px 20px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    background: #4facfe;
+    transform: scale(1.1);
+}
+
+/* Container */
+.container {
+    padding: 20px;
+}
+
+/* Multi-column */
+.columns {
+    column-count: 3;
+    column-gap: 20px;
+}
+
+.columns p {
+    background: white;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+}
+
+/* Image Gallery */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+    margin: 30px 0;
+}
+
+.gallery img {
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.4s;
+}
+
+.gallery img:hover {
+    transform: scale(1.1);
+}
+
+/* Cards */
+.cards {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    flex: 1 1 300px;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 20px;
+    text-align: center;
+}
+
+.card i {
+    font-size: 30px;
+    color: #4facfe;
+    margin-bottom: 10px;
+}
+
+.card:hover {
+    transform: translateY(-10px) rotate(1deg);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+/* Button */
+.btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 15px;
+    background: #4facfe;
+    color: white;
+    border-radius: 20px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #333;
+    color: white;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .columns {
+        column-count: 2;
+    }
+}
+
+@media (max-width: 600px) {
+    .columns {
+        column-count: 1;
+    }
+
+    nav {
+        flex-direction: column;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>Modern Webpage</h1>
+</header>
+
+<nav>
+    <a href="#">Home</a>
+    <a href="#">Gallery</a>
+    <a href="#">Services</a>
+    <a href="#">Contact</a>
+</nav>
+
+<div class="container">
+
+    <!-- Multi-column text -->
+    <section class="columns">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <p>Vivamus lacinia odio vitae vestibulum.</p>
+        <p>Cras venenatis euismod malesuada.</p>
+        <p>Integer non turpis sit amet metus gravida.</p>
+        <p>Donec vehicula cursus vestibulum.</p>
+    </section>
+
+    <!-- Image Gallery -->
+    <section class="gallery">
+        <img src="https://picsum.photos/400/300?1" alt="img1">
+        <img src="https://picsum.photos/400/300?2" alt="img2">
+        <img src="https://picsum.photos/400/300?3" alt="img3">
+        <img src="https://picsum.photos/400/300?4" alt="img4">
+    </section>
+
+    <!-- Cards -->
+    <section class="cards">
+
+        <div class="card">
+            <img src="https://picsum.photos/400/200?5">
+            <div class="card-content">
+                <i class="fas fa-code"></i>
+                <h3>Development</h3>
+                <p>Modern web solutions.</p>
+                <a href="#" class="btn">Learn</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://picsum.photos/400/200?6">
+            <div class="card-content">
+                <i class="fas fa-mobile-alt"></i>
+                <h3>Mobile</h3>
+                <p>Responsive design.</p>
+                <a href="#" class="btn">Learn</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://picsum.photos/400/200?7">
+            <div class="card-content">
+                <i class="fas fa-rocket"></i>
+                <h3>Performance</h3>
+                <p>Fast and optimized.</p>
+                <a href="#" class="btn">Learn</a>
+            </div>
+        </div>
+
+    </section>
+
+</div>
+
+<footer>
+    <p>© 2026 My Website</p>
+</footer>
+
+</body>
+</html>
